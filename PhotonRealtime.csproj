@@ -283,8 +283,47 @@
     <Reference Include="Photon3Unity3D">
       <HintPath>D:/Connor/Unity/CapstoneVR/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
     </Reference>
+    <Reference Include="MessageGeneration">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="RosBridgeClient">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Urdf">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/UnityEditors/2019.4.26f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

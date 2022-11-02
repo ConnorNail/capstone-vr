@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonRealtime", "PhotonRea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.AudioManager", "Oculus.AudioManager.csproj", "{08B10868-47DE-9CDC-9960-B3DEB8132121}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{79030DD9-4898-4795-6913-91CB3EF16E12}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.AudioManager.Audio.Editor", "Oculus.AudioManager.Audio.Editor.csproj", "{88C8C103-66F2-D67C-1181-86624B7B63C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Scripts.Editor", "Oculus.VR.Scripts.Editor.csproj", "{361BAC0C-1E8F-4548-F786-F82C97159321}"
@@ -46,8 +48,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonUnityNetworking.Utilities.Culling.Editor", "PhotonUnityNetworking.Utilities.Culling.Editor.csproj", "{C80AF919-7703-F879-6F11-87F90C38E958}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PunDemos.DemoSlotcarEditor", "PunDemos.DemoSlotcarEditor.csproj", "{942E0EDE-6252-A67E-2B38-F0A0512518A9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{79030DD9-4898-4795-6913-91CB3EF16E12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +99,10 @@ Global
 		{08B10868-47DE-9CDC-9960-B3DEB8132121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08B10868-47DE-9CDC-9960-B3DEB8132121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08B10868-47DE-9CDC-9960-B3DEB8132121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79030DD9-4898-4795-6913-91CB3EF16E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79030DD9-4898-4795-6913-91CB3EF16E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79030DD9-4898-4795-6913-91CB3EF16E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79030DD9-4898-4795-6913-91CB3EF16E12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88C8C103-66F2-D67C-1181-86624B7B63C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88C8C103-66F2-D67C-1181-86624B7B63C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C8C103-66F2-D67C-1181-86624B7B63C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -147,10 +151,6 @@ Global
 		{942E0EDE-6252-A67E-2B38-F0A0512518A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{942E0EDE-6252-A67E-2B38-F0A0512518A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{942E0EDE-6252-A67E-2B38-F0A0512518A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79030DD9-4898-4795-6913-91CB3EF16E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79030DD9-4898-4795-6913-91CB3EF16E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79030DD9-4898-4795-6913-91CB3EF16E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79030DD9-4898-4795-6913-91CB3EF16E12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

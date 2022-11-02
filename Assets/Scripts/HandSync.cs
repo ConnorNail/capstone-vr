@@ -10,16 +10,21 @@ public class HandSync : MonoBehaviour, IOnEventCallback
 {
     public const byte updatePoseEventCode = 1;
     public const byte updateButtonsEventCode = 2;
+    public const byte updateJointStateEventCode = 3;
 
     public GameObject rightHand;
 
     private float[] rightPose;
     private bool[] buttons;
+    //public float[] jointState;
+    public List<RosSharp.RosBridgeClient.JointStateWriter> JointStateWriters;
+
     // Start is called before the first frame update
     void Start()
     {
         rightPose = new float[6];
         buttons = new bool[3];
+        //jointState = new float[6];
     }
 
     // Update is called once per frame
@@ -66,6 +71,24 @@ public class HandSync : MonoBehaviour, IOnEventCallback
             float[] poseData = (float[])photonEvent.CustomData;
             rightHand.transform.position = new Vector3(poseData[0], poseData[1], poseData[2]);
             rightHand.transform.rotation = Quaternion.Euler(new Vector3(poseData[3], poseData[4], poseData[5]));
+        }
+
+        if (eventCode == updateJointStateEventCode)
+        {
+            Debug.Log("Updating location from master...");
+            float[] jointStateData = (float[])photonEvent.CustomData;
+            //jointState[0] = jointStateData[0];
+            //jointState[1] = jointStateData[1];
+            //jointState[2] = jointStateData[2];
+            //jointState[3] = jointStateData[3];
+            //jointState[4] = jointStateData[4];
+            //jointState[5] = jointStateData[5];
+            JointStateWriters[0].Write((float) jointStateData[0]);
+            JointStateWriters[1].Write((float) jointStateData[1]);
+            JointStateWriters[2].Write((float) jointStateData[2]);
+            JointStateWriters[3].Write((float) jointStateData[3]);
+            JointStateWriters[4].Write((float) jointStateData[4]);
+            JointStateWriters[5].Write((float) jointStateData[5]);
         }
     }
 

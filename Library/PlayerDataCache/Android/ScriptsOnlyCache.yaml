@@ -2,8 +2,21 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - HandSync
+    - HingeJointAngleCalculator
     - MainController
     - NetworkManager
+    - RosSharp.HingeJointLimitsManager
+    - RosSharp.RosBridgeClient.JointStateWriter
+    - RosSharp.Urdf.UrdfCollision
+    - RosSharp.Urdf.UrdfCollisions
+    - RosSharp.Urdf.UrdfInertial
+    - RosSharp.Urdf.UrdfJointRevolute
+    - RosSharp.Urdf.UrdfLink
+    - RosSharp.Urdf.UrdfPlugin
+    - RosSharp.Urdf.UrdfPlugins
+    - RosSharp.Urdf.UrdfRobot
+    - RosSharp.Urdf.UrdfVisual
+    - RosSharp.Urdf.UrdfVisuals
     Oculus.Spatializer.dll:
     - ONSPSettings
     Oculus.VR.Editor.dll:
@@ -23,8 +36,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -78,6 +89,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 59
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -97,59 +112,85 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 11770}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 11800}
+      Script: {instanceID: 11792}
     - Class: 114
-      Script: {instanceID: 12488}
+      Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 11844}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 12592}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13910}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 14126}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 14138}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 14464}
+      Script: {instanceID: 13374}
     - Class: 114
-      Script: {instanceID: 14838}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 15024}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 15036}
+      Script: {instanceID: 13836}
+    - Class: 114
+      Script: {instanceID: 13842}
+    - Class: 114
+      Script: {instanceID: 13946}
+    - Class: 114
+      Script: {instanceID: 13970}
+    - Class: 114
+      Script: {instanceID: 14106}
+    - Class: 114
+      Script: {instanceID: 14316}
+    - Class: 114
+      Script: {instanceID: 14344}
+    - Class: 114
+      Script: {instanceID: 14360}
+    - Class: 114
+      Script: {instanceID: 14496}
+    - Class: 114
+      Script: {instanceID: 14612}
+    - Class: 114
+      Script: {instanceID: 14706}
+    - Class: 114
+      Script: {instanceID: 15092}
+    - Class: 114
+      Script: {instanceID: 15292}
+    - Class: 114
+      Script: {instanceID: 15304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -203,6 +244,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 3a80da985e1a1dfd8bebd5a7f9b8da1a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JointStatePatcher
   - hash:
       serializedVersion: 2
       Hash: 80d2851602cb4bcb6f559596c5eb955b
@@ -275,6 +322,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneSampler
+  - hash:
+      serializedVersion: 2
+      Hash: a25ad252d1d62127b0f5c6d17181f1c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanVisualizerLines
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -391,10 +444,28 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointPrismatic
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LocomotionSampleSupport
+  - hash:
+      serializedVersion: 2
+      Hash: 229b8640d882292e90f94e00eeebe282
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp
+    className: HingeJointLimitsManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HingeJointAngleCalculator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -421,7 +492,7 @@ ScriptsOnlyBuild:
     className: ArmModel
   - hash:
       serializedVersion: 2
-      Hash: 40031ef7932db0bbfbc1b0a60805a652
+      Hash: e8750e3dcae158f20dea162d062abbf5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HandSync
@@ -517,6 +588,12 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
+      Hash: cfdb76b0a25130bf60824bc7a7448285
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfCollision
+  - hash:
+      serializedVersion: 2
       Hash: a2869f4febb8c245318403779e7b7014
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -553,6 +630,18 @@ ScriptsOnlyBuild:
     className: OVRControllerTest
   - hash:
       serializedVersion: 2
+      Hash: 8f2f1d30714d893174eb365f1e8fe726
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: GetParamServiceProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 870bdfc9028a850b6e40ea17db08772b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanSubscriber
+  - hash:
+      serializedVersion: 2
       Hash: 32c2e26363d3830b3fcd6735b46fef68
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
@@ -569,6 +658,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Oculus.dll
     namespaceName: Unity.XR.Oculus
     className: OculusLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanWriter
   - hash:
       serializedVersion: 2
       Hash: 4abb80cba2d78ed9258136201394eb1a
@@ -599,6 +694,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterCameraConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: b300185396ca1e0231bd4f070140561c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: PoseStampedPublisher
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -653,6 +754,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRPlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 85e89b51b107daea862016231064d6c3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfRobot
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -749,6 +856,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TeleportAimHandlerParabolic
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JointStateReader
   - hash:
       serializedVersion: 2
       Hash: 2d6c48bcbb0c5879a658aca82ca624a7
@@ -985,6 +1098,12 @@ ScriptsOnlyBuild:
     className: OnClickRpc
   - hash:
       serializedVersion: 2
+      Hash: 5c15f66853a446c1995b5508c9c7fa28
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfLink
+  - hash:
+      serializedVersion: 2
       Hash: 4810b3707d5fd5dc0d4e93afb64fcd4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1177,6 +1296,12 @@ ScriptsOnlyBuild:
     className: OvrAvatarComponent
   - hash:
       serializedVersion: 2
+      Hash: a25ad252d1d62127b0f5c6d17181f1c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanVisualizerSpheres
+  - hash:
+      serializedVersion: 2
       Hash: a8c61f120a248e691d195a82070bb1fb
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -1231,16 +1356,40 @@ ScriptsOnlyBuild:
     className: AnalyticsUI
   - hash:
       serializedVersion: 2
+      Hash: be54fe3c504eb4354238744417ca7c2d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: TwistSubscriber
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfCollisions
+  - hash:
+      serializedVersion: 2
       Hash: 0498232dd48b097128db9129acff161b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OvrAvatarTouchController
   - hash:
       serializedVersion: 2
+      Hash: ac7ab2ea4c8b32e359b107a2eb0c8549
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanPublisher
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrHoops
     className: DetectBasket
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfVisuals
   - hash:
       serializedVersion: 2
       Hash: f941c3a384168571b7d90f58ec4986bc
@@ -1261,6 +1410,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOpenToggle
   - hash:
       serializedVersion: 2
+      Hash: 4f07d984a781b6b2f93aab25595d68d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: OdometrySubscriber
+  - hash:
+      serializedVersion: 2
       Hash: f2804c5e7659d20873aa628b628aaa3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1273,10 +1428,22 @@ ScriptsOnlyBuild:
     className: GamePiece
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JointStateWriter
+  - hash:
+      serializedVersion: 2
       Hash: 6529848e3bbeb97fdff7ea6e01133d21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TeleportOrientationHandlerHMD
+  - hash:
+      serializedVersion: 2
+      Hash: dce761e73f3059c170256a3093bb0682
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyAxisJointTransformWriter
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1369,6 +1536,12 @@ ScriptsOnlyBuild:
     className: StatesGui
   - hash:
       serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointRevolute
+  - hash:
+      serializedVersion: 2
       Hash: 0927e41b46e1bd11671f9b5adda4b832
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -1405,6 +1578,12 @@ ScriptsOnlyBuild:
     className: ConnectionHandler
   - hash:
       serializedVersion: 2
+      Hash: 67c6133c6af2443af40454cecd99aad6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: ImageSubscriber
+  - hash:
+      serializedVersion: 2
       Hash: 22dc216204f0e65ce2161bd7b6ecf06b
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -1433,6 +1612,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
     className: OVROverlaySample
+  - hash:
+      serializedVersion: 2
+      Hash: 0083cb008925d54a6c989e91c154707d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfPlugin
   - hash:
       serializedVersion: 2
       Hash: cba6cca6bb3290c4c00d709cf63843db
@@ -1513,6 +1698,12 @@ ScriptsOnlyBuild:
     className: HandMeshUI
   - hash:
       serializedVersion: 2
+      Hash: cfdb76b0a25130bf60824bc7a7448285
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfVisual
+  - hash:
+      serializedVersion: 2
       Hash: 45f2a4e63a8b43166e3f85c4d543f00d
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -1535,6 +1726,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: BackgroundTimeOutField
+  - hash:
+      serializedVersion: 2
+      Hash: 2908deb51e3affdb0464f3f9b7bacb67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient.Actionlib
+    className: UnityFibonacciActionClient
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1711,6 +1908,12 @@ ScriptsOnlyBuild:
     className: PlatformManager
   - hash:
       serializedVersion: 2
+      Hash: cf9629c79efd3deebc609c9132175e02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanVisualizerMesh
+  - hash:
+      serializedVersion: 2
       Hash: d9aa52c5a283a9b8a790e55c0dee9ccf
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1733,6 +1936,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: IsConnectedProperty
+  - hash:
+      serializedVersion: 2
+      Hash: f5ac396f2b098b84c0d0cbf0ce2f2f1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient.Actionlib
+    className: UnityFibonacciActionSever
   - hash:
       serializedVersion: 2
       Hash: 9edf0788742c31d8eaaf32cf4feac747
@@ -1807,6 +2016,12 @@ ScriptsOnlyBuild:
     className: GroupPresenceSample
   - hash:
       serializedVersion: 2
+      Hash: 8a1cc88a1b93cb83cb6597e20c3e9748
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoySubscriber
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1871,6 +2086,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: PlayerUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfPlugins
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2059,6 +2280,12 @@ ScriptsOnlyBuild:
     className: MainController
   - hash:
       serializedVersion: 2
+      Hash: 02237aa49c2beff594b12656405dd77d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: RosConnector
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2069,6 +2296,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: AppVersionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: d965d9a4cba142a3e0d93432cea3f34f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyAxisInputPasser
   - hash:
       serializedVersion: 2
       Hash: 8302a05adec609c4b10f8b6cc3443e4c
@@ -2083,6 +2316,18 @@ ScriptsOnlyBuild:
     className: FriendItem
   - hash:
       serializedVersion: 2
+      Hash: 4f07d984a781b6b2f93aab25595d68d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: PoseStampedSubscriber
+  - hash:
+      serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointFixed
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrHoops
@@ -2095,10 +2340,22 @@ ScriptsOnlyBuild:
     className: PassthroughStyler
   - hash:
       serializedVersion: 2
+      Hash: dce761e73f3059c170256a3093bb0682
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyAxisJointMotorWriter
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 4744fae82304fe339d6ea1778621170e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JointStatePublisher
   - hash:
       serializedVersion: 2
       Hash: e1e615eaf73e560828f53edc8952e615
@@ -2155,10 +2412,22 @@ ScriptsOnlyBuild:
     className: OvrAvatarMaterialManager
   - hash:
       serializedVersion: 2
+      Hash: 40c9359758686abcd0b6fd7064d6581c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: ImagePublisher
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomNameProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 2327f9f13a5fb7893b784a290514a506
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JointStateSubscriber
   - hash:
       serializedVersion: 2
       Hash: 32f8aa17c8c80321b4c28ac9073a84b3
@@ -2185,6 +2454,12 @@ ScriptsOnlyBuild:
     className: PlayerManager
   - hash:
       serializedVersion: 2
+      Hash: 941515e33a55f1308788e79ef3be405c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: LaserScanReader
+  - hash:
+      serializedVersion: 2
       Hash: a8d3c943d9168cbdd8596f040ff02ff4
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
@@ -2201,6 +2476,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.LipSync.dll
     namespaceName: 
     className: EnableSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointContinuous
   - hash:
       serializedVersion: 2
       Hash: dbb1a6051987b4922d94d1caad387b1c
@@ -2255,6 +2536,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GazeTargetSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: 615d9c125246557e3b2f41e7d47e3b56
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfInertial
   - hash:
       serializedVersion: 2
       Hash: f8438efc679de058330bd3e038df1378
@@ -2317,6 +2604,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: c88c4199b288356ec3eb2f0d85abc619
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyButtonReader
+  - hash:
+      serializedVersion: 2
       Hash: 48804c7edfd2998cdab1bf456d8dbfd0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -2375,6 +2668,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrBoardGame
     className: MatchmakingManager
+  - hash:
+      serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointPlanar
   - hash:
       serializedVersion: 2
       Hash: 0cc2f729ed4885ca9c95ead34ce0e907
@@ -2485,6 +2784,12 @@ ScriptsOnlyBuild:
     className: VREyeRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 63640c3f4cb1234aa30487536cd72d07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.Urdf
+    className: UrdfJointFloating
+  - hash:
+      serializedVersion: 2
       Hash: 2b53d93770b9036b2fd1c7854560bc69
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -2549,6 +2854,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
     className: TrainLocomotive
+  - hash:
+      serializedVersion: 2
+      Hash: c88c4199b288356ec3eb2f0d85abc619
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyAxisReader
   - hash:
       serializedVersion: 2
       Hash: 8f15c253902ff4eef507927669b9dc80
@@ -2695,6 +3006,12 @@ ScriptsOnlyBuild:
     className: PlayerNumbering
   - hash:
       serializedVersion: 2
+      Hash: 9d30893e969eb98f3869d71be6b8a9d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: TwistPublisher
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -2705,6 +3022,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Management.dll
     namespaceName: UnityEngine.XR.Management
     className: XRManagerSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 256bee10772d5b5129dfbb23f40d72a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp
+    className: PrismaticJointLimitsManager
   - hash:
       serializedVersion: 2
       Hash: 9726bc46e15d44429bd38fb013657f1e
@@ -2741,6 +3064,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomIsOfflineProperty
+  - hash:
+      serializedVersion: 2
+      Hash: fb3b94f234641c0f044c4ae26a455808
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: RosSharp.RosBridgeClient
+    className: JoyPublisher
   - hash:
       serializedVersion: 2
       Hash: c3bd598ebf26a1734f4e48c8dfe999af

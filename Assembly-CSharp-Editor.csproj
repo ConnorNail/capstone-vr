@@ -73,6 +73,58 @@
     <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildSamples.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Editor\OculusSampleFrameworkUtil.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Editor\OVROverlayCanvasEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\FibonacciAction\FibonacciActionClientEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\JointStatePatcherEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\DirectoryActionAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\DirectoryAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\DirectoryMsgAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\DirectorySrvAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\PackageActionAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\PackageAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\PackageMsgAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\PackageSrvAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\SingleActionAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\SingleAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\SingleMsgAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\MessageGeneration\SingleSrvAutoGenEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\UrdfTransfer\TransferFromRosEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\UrdfTransfer\TransferFromRosHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\UrdfTransfer\TransferToRosEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\RosBridgeClient\Editor\UrdfTransfer\TransferToRosHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\AssetHandlers\LocateAssetHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\AssetHandlers\UrdfAssetPathHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\AssetHandlers\UrdfExportPathHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\AssetHandlers\UrdfMeshExportHandler.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\HingeJointLimitsManagerEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfCollisionEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfCollisionsEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfInertialEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfJointEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfLinkEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfPluginsEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfRobotEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfVisualEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\CustomInspectors\UrdfVisualsEditor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MenuItems\UrdfExportEditorWindow.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MenuItems\UrdfImporterContextMenuItem.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MenuItems\UrdfImporterMenuItem.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MenuItems\UrdfRobotCreatorMenuItem.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\ColladaAssetPostProcessor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\StlAssetPostProcessor.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\StlExporter.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\StlImporter.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\StlReader.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\MeshProcessing\StlWriter.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfCollisionExtensions.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfCollisionsExtensions.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfGeometry.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfGeometryCollision.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfGeometryVisual.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfLinkExtensions.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfMaterial.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfRobotExtensions.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfVisualExtensions.cs" />
+    <Compile Include="Assets\RosSharp\Scripts\Urdf\Editor\UrdfComponents\UrdfVisualsExtensions.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityEditors/2019.4.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -277,8 +329,47 @@
     <Reference Include="Photon3Unity3D">
       <HintPath>D:/Connor/Unity/CapstoneVR/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
     </Reference>
+    <Reference Include="MessageGeneration">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/MessageGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="RosBridgeClient">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/RosBridgeClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Urdf">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Urdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/Connor/Unity/CapstoneVR/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
