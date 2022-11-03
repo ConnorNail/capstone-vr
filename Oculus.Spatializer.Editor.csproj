@@ -288,6 +288,9 @@
     <Reference Include="Newtonsoft.Json.Bson">
       <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/websocket-sharp.dll</HintPath>
     </Reference>
@@ -314,9 +317,6 @@
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/Microsoft/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/Connor/Unity/CapstoneVR/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/Connor/Unity/CapstoneVR/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
