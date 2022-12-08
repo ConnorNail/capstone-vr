@@ -16,6 +16,15 @@ public class HandSync : MonoBehaviour, IOnEventCallback
 
     private float[] rightPose;
     private bool[] buttons;
+    private float[] rightVelocities;
+
+    private float lastXPos;
+    private float lastYPos;
+    private float lastZPos;
+
+    private Quaternion deltaRotation;
+    private Quaternion lastRotation;
+
     //public float[] jointState;
     public List<RosSharp.RosBridgeClient.JointStateWriter> JointStateWriters;
 
@@ -24,28 +33,49 @@ public class HandSync : MonoBehaviour, IOnEventCallback
     {
         rightPose = new float[6];
         buttons = new bool[3];
+        rightVelocities = new float[6];
+
+        lastXPos = rightHand.transform.localPosition.x;
+        lastYPos = rightHand.transform.localPosition.y;
+        lastZPos = rightHand.transform.localPosition.z;
+        lastRotation = rightHand.transform.rotation;
         //jointState = new float[6];
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        sendMapUpdates();
+        sendVelocityData();
         sendButtonUpdates();
     }
 
-    private void sendMapUpdates()
+    private void sendVelocityData()
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            rightPose[0] = rightHand.transform.localPosition.x;
-            rightPose[1] = rightHand.transform.localPosition.y;
-            rightPose[2] = rightHand.transform.localPosition.z;
-            rightPose[3] = rightHand.transform.rotation.eulerAngles.x;
-            rightPose[4] = rightHand.transform.rotation.eulerAngles.y;
-            rightPose[5] = rightHand.transform.rotation.eulerAngles.z;
+            // Position
+            rightVelocities[0] = (rightHand.transform.localPosition.x - lastXPos) / Time.deltaTime;
+            rightVelocities[1] = (rightHand.transform.localPosition.y - lastYPos) / Time.deltaTime;
+            rightVelocities[2] = (rightHand.transform.localPosition.z - lastZPos) / Time.deltaTime;
+
+            lastXPos = rightHand.transform.localPosition.x;
+            lastYPos = rightHand.transform.localPosition.y;
+            lastZPos = rightHand.transform.localPosition.z;
+
+            // Rotation
+            deltaRotation = rightHand.transform.rotation * Quaternion.Inverse(lastRotation);
+            deltaRotation.ToAngleAxis(out var angle, out var axis);
+
+            angle *= Mathf.Deg2Rad;
+
+            rightVelocities[3] = (1.0f / Time.deltaTime) * angle * axis.x;
+            rightVelocities[4] = (1.0f / Time.deltaTime) * angle * axis.y;
+            rightVelocities[5] = (1.0f / Time.deltaTime) * angle * axis.z;
+
+            lastRotation = rightHand.transform.rotation;
+
             RaiseEventOptions raiseEvent = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(updatePoseEventCode, rightPose, raiseEvent, SendOptions.SendReliable);
+            PhotonNetwork.RaiseEvent(updatePoseEventCode, rightVelocities, raiseEvent, SendOptions.SendReliable);
         }
     }
 
